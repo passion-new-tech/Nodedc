@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumni - ODCMAN</title>
+  <link rel="stylesheet" href="./node_modules/boosted/dist/css/boosted.min.css">
+  <style>
+    body { background: #f8f9fa; }
+    .sidebar { min-width: 220px; max-width: 220px; background: #222a35; color: #fff; height: 100vh; position: fixed; top: 0; left: 0; z-index: 1000; display: flex; flex-direction: column; }
+    .sidebar .nav-link { color: #fff; font-weight: 500; }
+    .sidebar .nav-link.active, .sidebar .nav-link:hover { background: #ff7900; color: #fff; }
+    .main-content { margin-left: 220px; padding: 2rem; }
+    .user-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+    .navbar { margin-left: 220px; background: #fff; border-bottom: 1px solid #e5e5e5; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+    @media (max-width: 991px) { .sidebar { position: static; min-width: 100%; max-width: 100%; height: auto; } .main-content, .navbar { margin-left: 0; } }
+  </style>
+</head>
+<body>
+  <nav class="sidebar d-flex flex-column p-3">
+    <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <span class="fs-4 fw-bold">ODC Man</span>
+    </a>
+    <hr class="bg-light">
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item"><a href="index.html" class="nav-link"> <span class="icon icon-home me-2"></span> Tableau de bord</a></li>
+      <li><a href="profils.html" class="nav-link"> <span class="icon icon-user me-2"></span> Profils</a></li>
+      <li><a href="acces.html" class="nav-link"> <span class="icon icon-cart me-2"></span> Contrôle d'accès</a></li>
+      <li><a href="candidatures.html" class="nav-link"> <span class="icon icon-edit me-2"></span> Candidatures</a></li>
+      <li><a href="alumni.html" class="nav-link active"> <span class="icon icon-users me-2"></span> Alumni</a></li>
+      <li><a href="messages.html" class="nav-link"> <span class="icon icon-mail me-2"></span> Messages</a></li>
+      <li><a href="parametres.html" class="nav-link"> <span class="icon icon-cog me-2"></span> Paramètres</a></li>
+      <li><a href="#" class="nav-link"> <span class="icon icon-logout me-2"></span> Déconnexion</a></li>
+    </ul>
+  </nav>
+  <header class="navbar navbar-expand navbar-light sticky-top px-4 py-2">
+    <a class="navbar-brand fw-bold" href="#">Orange Digital Manager</a>
+    <div class="d-flex align-items-center ms-auto">
+      <span class="me-2">Musfiq</span>
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="avatar" class="user-avatar">
+      <span class="badge bg-warning ms-3">Admin</span>
+    </div>
+  </header>
+  <main class="main-content">
+    <h2 class="mb-4">Gestion des alumni</h2>
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Réseau des anciens</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Awa Diop - Data Scientist - Orange</li>
+          <li class="list-group-item">Mohamed Traoré - Développeur Web - Freelance</li>
+          <li class="list-group-item">Lina El Amrani - Analyste Cybersécurité - Orange Maroc</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Inviter un alumni à un événement</h5>
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="nomAlumni" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="nomAlumni" placeholder="Nom de l'alumni">
+          </div>
+          <div class="col-md-6">
+            <label for="evenement" class="form-label">Événement</label>
+            <input type="text" class="form-control" id="evenement" placeholder="Nom de l'événement">
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Envoyer l'invitation</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Témoignages récents</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">"L'ODC a changé ma vie professionnelle !" - Awa Diop</li>
+          <li class="list-group-item">"Merci pour l'accompagnement et le réseau." - Mohamed Traoré</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <script src="./node_modules/boosted/dist/js/boosted.min.js"></script>
+</body>
+</html>

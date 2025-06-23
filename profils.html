@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profils utilisateurs - ODCMAN</title>
+  <link rel="stylesheet" href="./node_modules/boosted/dist/css/boosted.min.css">
+  <link rel="stylesheet" href="./global.css">
+</head>
+<body>
+  <nav class="sidebar d-flex flex-column p-3">
+    <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <span class="fs-4 fw-bold">ODC Man</span>
+    </a>
+    <hr class="bg-light">
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item"><a href="index.html" class="nav-link"> <span class="icon icon-home me-2"></span> Tableau de bord</a></li>
+      <li><a href="profils.html" class="nav-link active"> <span class="icon icon-user me-2"></span> Profils</a></li>
+      <li><a href="acces.html" class="nav-link"> <span class="icon icon-cart me-2"></span> Contrôle d'accès</a></li>
+      <li><a href="candidatures.html" class="nav-link"> <span class="icon icon-edit me-2"></span> Candidatures</a></li>
+      <li><a href="alumni.html" class="nav-link"> <span class="icon icon-users me-2"></span> Alumni</a></li>
+      <li><a href="messages.html" class="nav-link"> <span class="icon icon-mail me-2"></span> Messages</a></li>
+      <li><a href="parametres.html" class="nav-link"> <span class="icon icon-cog me-2"></span> Paramètres</a></li>
+      <li><a href="deconnexion.html" class="nav-link"> <span class="icon icon-logout me-2"></span> Déconnexion</a></li>
+    </ul>
+  </nav>
+  <header class="navbar navbar-expand navbar-light sticky-top px-4 py-2">
+    <a class="navbar-brand fw-bold" href="#">Orange Digital Manager</a>
+    <div class="d-flex align-items-center ms-auto">
+      <span class="me-2">M.Allou</span>
+      <img src="./assets/avatar.png" alt="avatar" class="user-avatar">
+      <span class="badge bg-primary ms-3">Admin</span>
+    </div>
+  </header>
+  <main class="main-content">
+    <h2 class="mb-4">Gestion des profils utilisateurs</h2>
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Liste des profils</h5>
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead class="table-light">
+              <tr>
+                <th>Nom du profil</th>
+                <th>Description</th>
+                <th>Droits d'accès</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Administrateur</td>
+                <td>Gestion globale, statistiques, programmes</td>
+                <td>Tout accès</td>
+                <td><button class="btn btn-sm btn-outline-primary">Modifier</button></td>
+              </tr>
+              <tr>
+                <td>Contrôleur</td>
+                <td>Gestion des entrées/sorties, habilitations</td>
+                <td>Contrôle accès</td>
+                <td><button class="btn btn-sm btn-outline-primary">Modifier</button></td>
+              </tr>
+              <tr>
+                <td>Formateur</td>
+                <td>Gestion de sa formation</td>
+                <td>Accès formation</td>
+                <td><button class="btn btn-sm btn-outline-primary">Modifier</button></td>
+              </tr>
+              <tr>
+                <td>Apprenant</td>
+                <td>Accès à son parcours, documents</td>
+                <td>Lecture, feedback</td>
+                <td><button class="btn btn-sm btn-outline-primary">Modifier</button></td>
+              </tr>
+              <tr>
+                <td>Visiteur/Invité</td>
+                <td>Accès ponctuel (ex: Hackathon)</td>
+                <td>Accès restreint</td>
+                <td><button class="btn btn-sm btn-outline-primary">Modifier</button></td>
+              </tr>
+              <tr>
+                <td>Candidat</td>
+                <td>Accès temporaire (ex: entretien)</td>
+                <td>Accès limité</td>
+                <td><button class="btn btn-sm btn-outline-primary">Modifier</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Ajouter / Modifier un profil</h5>
+        <form class="row g-3">
+          <div class="col-md-4">
+            <label for="nomProfil" class="form-label">Nom du profil</label>
+            <input type="text" class="form-control" id="nomProfil" placeholder="Nom du profil">
+          </div>
+          <div class="col-md-4">
+            <label for="descriptionProfil" class="form-label">Description</label>
+            <input type="text" class="form-control" id="descriptionProfil" placeholder="Description">
+          </div>
+          <div class="col-md-4">
+            <label for="droitsProfil" class="form-label">Droits d'accès</label>
+            <input type="text" class="form-control" id="droitsProfil" placeholder="Droits (ex: lecture, écriture)">
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="./node_modules/boosted/dist/js/boosted.min.js"></script>
+</body>
+</html>
