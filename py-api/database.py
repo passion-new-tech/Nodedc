@@ -6,10 +6,10 @@ import math
 
 # Configuration de la base de données
 DB_CONFIG = {
-    "host": "localhost",
-    "dbname": "wigest",
-    "user": "postgres",
-    "password": "pass"
+    "host": "aws-0-eu-west-3.pooler.supabase.com",
+    "dbname": "postgres",
+    "user": "postgres.lfcmkcadxqhftjciblcp",
+    "password": "s2uw!6c#qax*C&1bHsHY"
 }
 
 @contextmanager
